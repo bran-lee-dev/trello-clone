@@ -9,7 +9,8 @@
     "test": "ng test",
     "commitlint": "commitlint",
     "prepare": "husky",
-    "lint": "ng lint"
+    "lint": "ng lint",
+    "cm": "cz"
   },
   "private": true,
   "dependencies": {
@@ -59,5 +60,10 @@
     "extends": [
       "@commitlint/config-conventional"
     ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
   }
 }
