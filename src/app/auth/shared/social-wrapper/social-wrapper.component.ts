@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
-import { SocialNetwork } from '../../models';
 import { TitleCasePipe } from '@angular/common';
+import { SocialNetwork } from '../../models';
 
 @Component({
   selector: 'app-social-wrapper',
