@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, input } from '@angular/core';
 import { TitleCasePipe } from '@angular/common';
 import { SocialNetwork } from '../../models';
 
@@ -7,8 +7,8 @@ import { SocialNetwork } from '../../models';
   standalone: true,
   imports: [TitleCasePipe],
   templateUrl: './social-wrapper.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SocialWrapperComponent {
-  @Input({ required: true })
-  public socialMediaList!: SocialNetwork[];
+  public socialMediaList = input.required<SocialNetwork[]>();
 }
