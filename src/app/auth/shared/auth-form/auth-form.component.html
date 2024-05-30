@@ -1,0 +1,11 @@
+<form class="flex w-full flex-col gap-2">
+  <input
+    class="h-10 rounded-[3px] border-2 border-[#091e4224] px-2 py-[0.375rem] text-sm font-normal text-[#172b4d] outline-none placeholder:text-[#5e6c84] focus:border-[#0c66e4]"
+    type="text"
+    placeholder="Enter your email" />
+  <ng-content select="p" />
+  <input
+    class="h-10 cursor-pointer bg-[#0c66e4] font-medium text-white hover:bg-[#0055CC]"
+    type="submit"
+    [value]="formInputValue()" />
+</form>
