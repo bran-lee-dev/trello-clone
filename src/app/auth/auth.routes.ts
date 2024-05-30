@@ -13,4 +13,11 @@ export const AUTH_ROUTES: Routes = [
         m => m.RegisterComponent
       ),
   },
+  {
+    path: 'resetpassword',
+    loadComponent: () =>
+      import('./pages/recovery-link/recovery-link.component').then(
+        m => m.RecoveryLinkComponent
+      ),
+  },
 ];
