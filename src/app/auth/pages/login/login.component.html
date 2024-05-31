@@ -1,1 +1,20 @@
-<p>login works!</p>
+<app-layout title="Sign in - Trello">
+  <div
+    class="xs:py-8 super:px-10 super:h-max super:shadow-lumina flex h-full flex-col items-center p-4">
+    <section
+      class="super:h-auto super:w-full flex h-full w-1/2 min-w-72 max-w-xs flex-col items-center rounded-[3px]">
+      <app-header title="Log in to continue" />
+      <app-auth-form class="w-full" formInputValue="Continue" />
+      <p class="mb-4 mt-6 w-max text-sm font-medium leading-4 text-[#5e6c84]">
+        Or continue with:
+      </p>
+      <app-social-wrapper class="w-full" [socialMediaList]="socialMediaList" />
+      <app-navigation-links [navigationLinksList]="navigationLinksList" />
+      <div class="m-auto"></div>
+      <div class="mt-4 h-[1px] w-full bg-[#c1c7d0]"></div>
+      <app-footer />
+    </section>
+    <app-legal-links />
+    <app-protected-site-message />
+  </div>
+</app-layout>
