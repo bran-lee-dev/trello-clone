@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, input } from '@angular/core';
 import { TrelloLogoComponent } from '../../../shared/components/trello-logo/trello-logo.component';
 
 @Component({
@@ -8,4 +8,6 @@ import { TrelloLogoComponent } from '../../../shared/components/trello-logo/trel
   templateUrl: './header.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class HeaderComponent {}
+export class HeaderComponent {
+  public title = input.required<string>();
+}
