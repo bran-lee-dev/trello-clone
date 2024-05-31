@@ -1,9 +1,9 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
-  selector: 'app-logo',
+  selector: 'app-trello-logo',
   standalone: true,
-  templateUrl: './logo.component.html',
+  templateUrl: './trello-logo.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class LogoComponent {}
+export class TrelloLogoComponent {}
