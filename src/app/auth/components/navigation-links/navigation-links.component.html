@@ -1,1 +1,15 @@
-<p>navigation-links works!</p>
+<ul class="mt-6 flex gap-2 text-sm font-normal">
+  @for (navigationLink of navigationLinksList(); track $index) {
+    <li>
+      @if (navigationLink.routerLink) {
+        <a
+          class="text-[#0C66E4] hover:underline"
+          [routerLink]="navigationLink.routerLink"
+          >{{ navigationLink.label }}</a
+        >
+      } @else {
+        <span class="text-[#44546F]">{{ navigationLink.label }}</span>
+      }
+    </li>
+  }
+</ul>
