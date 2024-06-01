@@ -1,1 +1,39 @@
-<p>register works!</p>
+<app-layout title="Sign up - Trello">
+  <div
+    class="flex h-full flex-col items-center p-4 xs:py-8 super:h-max super:px-10 super:shadow-lumina">
+    <section
+      class="flex h-full w-1/2 min-w-72 max-w-xs flex-col items-center rounded-[3px] super:h-auto super:w-full">
+      <app-header title="Sign up to continue" />
+      <app-auth-form
+        class="w-full"
+        formInputValue="Sign up"
+        [errorMessages]="errorMessages">
+        <p class="mb-2 text-xs leading-[1.071rem] text-[#44546F]">
+          By signing up, I accept the Atlassian
+          <a
+            class="text-[#0C66E4]"
+            href="https://www.atlassian.com/legal/cloud-terms-of-service"
+            rel="noopener noreferrer nofollow"
+            >Cloud Terms of Service</a
+          >
+          and acknowledge the
+          <a
+            class="text-[#0C66E4]"
+            href="https://www.atlassian.com/legal/privacy-policy"
+            rel="noopener noreferrer nofollow"
+            >Privacy Policy</a
+          >.
+        </p>
+      </app-auth-form>
+      <p class="mb-4 mt-6 w-max text-sm font-medium leading-4 text-[#5e6c84]">
+        Or continue with:
+      </p>
+      <app-social-wrapper class="w-full" [socialMediaList]="socialMediaList" />
+      <app-navigation-links [navigationLinksList]="navigationLinksList" />
+      <div class="m-auto"></div>
+      <div class="mt-4 h-[1px] w-full bg-[#c1c7d0]"></div>
+      <app-footer />
+    </section>
+    <app-protected-site-message class="flex w-full justify-center" />
+  </div>
+</app-layout>
