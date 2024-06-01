@@ -1,10 +1,29 @@
-<form class="flex w-full flex-col gap-2" autocomplete="on">
-  <input
-    class="h-10 rounded-[3px] border-2 border-[#091e4224] px-[0.375rem] py-2 text-sm font-normal text-[#172b4d] outline-none transition-colors placeholder:text-[#5e6c84] focus:border-[#0c66e4]"
-    type="email"
-    autocomplete="email"
-    name="email"
-    placeholder="Enter your email" />
+<form
+  class="flex w-full flex-col gap-2"
+  autocomplete="on"
+  [formGroup]="loginForm"
+  (ngSubmit)="onSubmit()">
+  <div class="w-full">
+    <input
+      class="h-10 w-full rounded-[3px] border-2 border-[#091e4224] px-[0.375rem] py-2 text-sm font-normal text-[#172b4d] outline-none transition-colors placeholder:text-[#5e6c84] focus:border-[#0c66e4]"
+      type="email"
+      autocomplete="email"
+      name="email"
+      placeholder="Enter your email"
+      formControlName="email"
+      [ngStyle]="{
+        'border-color': loginForm.invalid && isSent() ? '#e2483d' : '',
+        transition: 'border-color 0.15s cubic-bezier(0.4, 0, 0.2, 1)'
+      }" />
+    @if (isSent()) {
+      <span class="mt-1 flex gap-1 text-xs text-[#AE2E24]">
+        @if (loginForm.invalid) {
+          <app-auth-error-icon fillColor="#ffffff" />
+        }
+        {{ getErrorField() }}
+      </span>
+    }
+  </div>
   <ng-content select="p" />
   <input
     class="h-10 cursor-pointer bg-[#0c66e4] text-sm font-medium text-white transition-colors hover:bg-[#0055CC]"
