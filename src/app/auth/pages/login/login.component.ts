@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { LayoutComponent } from '../layout/layout.component';
-import { NavigationLink, SocialNetwork } from '../../models';
+import { ErrorMessages, NavigationLink, SocialNetwork } from '../../models';
 import { AuthFormComponent } from '../../components/auth-form/auth-form.component';
 import { SocialWrapperComponent } from '../../components/social-wrapper/social-wrapper.component';
 import { ProtectedSiteMessageComponent } from '../../components/protected-site-message/protected-site-message.component';
@@ -23,6 +23,7 @@ import { HeaderComponent } from '../../components/header/header.component';
     SocialWrapperComponent,
   ],
   templateUrl: './login.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class LoginComponent {
   public readonly socialMediaList: SocialNetwork[] = [
@@ -81,4 +82,9 @@ export class LoginComponent {
       routerLink: '/signup',
     },
   ];
+
+  public readonly errorMessages: ErrorMessages = {
+    required: 'Enter an email address',
+    email: 'Enter a valid email address',
+  };
 }

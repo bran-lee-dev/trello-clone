@@ -1,10 +1,13 @@
 <app-layout title="Sign in - Trello">
   <div
-    class="xs:py-8 super:px-10 super:h-max super:shadow-lumina flex h-full flex-col items-center p-4">
+    class="flex h-full flex-col items-center p-4 xs:py-8 super:h-max super:px-10 super:shadow-lumina">
     <section
-      class="super:h-auto super:w-full flex h-full w-1/2 min-w-72 max-w-xs flex-col items-center rounded-[3px]">
+      class="flex h-full w-1/2 min-w-72 max-w-xs flex-col items-center rounded-[3px] super:h-auto super:w-full">
       <app-header title="Log in to continue" />
-      <app-auth-form class="w-full" formInputValue="Continue" />
+      <app-auth-form
+        class="w-full"
+        formInputValue="Continue"
+        [errorMessages]="errorMessages" />
       <p class="mb-4 mt-6 w-max text-sm font-medium leading-4 text-[#5e6c84]">
         Or continue with:
       </p>
@@ -15,6 +18,6 @@
       <app-footer />
     </section>
     <app-legal-links />
-    <app-protected-site-message />
+    <app-protected-site-message class="flex w-full justify-center" />
   </div>
 </app-layout>
