@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
+import { LegalLink } from '../../models';
 
 @Component({
   selector: 'app-legal-links',
@@ -6,4 +7,6 @@ import { Component } from '@angular/core';
   imports: [],
   templateUrl: './legal-links.component.html',
 })
-export class LegalLinksComponent {}
+export class LegalLinksComponent {
+  public legalLinksList = input.required<LegalLink[]>();
+}
