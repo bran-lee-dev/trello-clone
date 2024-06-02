@@ -1,6 +1,11 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { LayoutComponent } from '../layout/layout.component';
-import { ErrorMessages, NavigationLink, SocialNetwork } from '../../models';
+import {
+  ErrorMessages,
+  LegalLink,
+  NavigationLink,
+  SocialNetwork,
+} from '../../models';
 import { AuthFormComponent } from '../../components/auth-form/auth-form.component';
 import { SocialWrapperComponent } from '../../components/social-wrapper/social-wrapper.component';
 import { ProtectedSiteMessageComponent } from '../../components/protected-site-message/protected-site-message.component';
@@ -87,4 +92,18 @@ export class LoginComponent {
     required: 'Enter an email address',
     email: 'Enter a valid email address',
   };
+
+  public readonly legalLinksList: LegalLink[] = [
+    {
+      label: 'Privacy Policy',
+      link: 'https://www.atlassian.com/legal/privacy-policy',
+    },
+    {
+      label: '•',
+    },
+    {
+      label: 'User Notice',
+      link: 'https://www.atlassian.com/legal/user-notice',
+    },
+  ];
 }
