@@ -15,10 +15,11 @@
       formControlName="email"
       [ngStyle]="{
         'border-color': loginForm.invalid && isSent() ? '#e2483d' : '',
-        transition: 'border-color 0.15s cubic-bezier(0.4, 0, 0.2, 1)'
+        transition: 'border-color 0.15s cubic-bezier(0.4, 0, 0.2, 1)',
+        'margin-bottom': isSent() ? '0.25rem' : ''
       }" />
     @if (isSent()) {
-      <span class="mt-1 flex gap-1 text-xs text-[#AE2E24]">
+      <span class="flex gap-1 text-xs text-[#AE2E24]">
         @if (loginForm.invalid) {
           <app-auth-error-icon fillColor="#ffffff" />
         }
