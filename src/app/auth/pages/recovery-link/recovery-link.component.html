@@ -1,1 +1,23 @@
-<p>recovery-link works!</p>
+<app-layout title="Reset password - Trello">
+  <div
+    class="flex h-full flex-col items-center p-4 xs:py-8 super:h-max super:px-10 super:shadow-lumina">
+    <section
+      class="flex h-full w-1/2 min-w-72 max-w-xs flex-col items-center rounded-[3px] super:h-auto super:w-full">
+      <app-header title="Can't log in?" />
+      <app-auth-form
+        class="mt-1 w-full"
+        formInputValue="Send recovery link"
+        formInputPlaceholder="Enter email"
+        [errorMessages]="errorMessages">
+        <label class="text-xs font-medium text-[#44546F]" for="email"
+          >We'll send a recovery link to</label
+        >
+      </app-auth-form>
+      <app-navigation-links [navigationLinksList]="navigationLinksList" />
+      <div class="m-auto"></div>
+      <div class="mt-4 h-[1px] w-full bg-[#c1c7d0]"></div>
+      <app-footer />
+    </section>
+    <app-legal-links [legalLinksList]="legalLinksList" />
+  </div>
+</app-layout>
