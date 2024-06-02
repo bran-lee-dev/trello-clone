@@ -25,6 +25,7 @@ export class AuthFormComponent {
     required: 'Please enter an email address',
     email: 'Please enter a valid email address',
   });
+  public formInputPlaceholder = input<string>('Enter your email');
   public isSent = signal<boolean>(false);
 
   public loginForm = this.fb.nonNullable.group({

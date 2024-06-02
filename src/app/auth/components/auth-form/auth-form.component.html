@@ -4,12 +4,13 @@
   [formGroup]="loginForm"
   (ngSubmit)="onSubmit()">
   <div class="w-full">
+    <ng-content select="label"></ng-content>
     <input
       class="h-10 w-full rounded-[3px] border-2 border-[#091e4224] px-[0.375rem] py-2 text-sm font-normal text-[#172b4d] outline-none transition-colors placeholder:text-[#5e6c84] focus:border-[#0c66e4]"
       type="email"
       autocomplete="email"
       name="email"
-      placeholder="Enter your email"
+      [placeholder]="formInputPlaceholder()"
       formControlName="email"
       [ngStyle]="{
         'border-color': loginForm.invalid && isSent() ? '#e2483d' : '',
