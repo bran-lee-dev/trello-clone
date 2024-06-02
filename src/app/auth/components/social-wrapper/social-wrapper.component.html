@@ -1,6 +1,7 @@
 <ul class="flex flex-col items-center gap-4">
   @for (socialMedia of socialMediaList(); track $index) {
-    <li class="w-full cursor-pointer">
+    <li
+      class="w-full cursor-pointer active:bg-[#091e420a] active:text-[#505f79]">
       <button
         (click)="socialMedia.authenticateWithSocialMedia()"
         class="mb flex h-10 w-full items-center justify-center gap-[0.625rem] border-[1px] border-[#c1c7d0]">
