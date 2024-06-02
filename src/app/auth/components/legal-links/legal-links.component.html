@@ -1,23 +1,18 @@
 <ul
   class="mt-3 flex h-max w-2/5 min-w-72 max-w-xs justify-center gap-2 text-[0.688rem] font-normal leading-[0.875rem] super:w-full">
-  <li>
-    <a
-      class="text-[#172b4d] hover:underline"
-      href="https://www.atlassian.com/legal/privacy-policy"
-      target="_blank"
-      rel="noopener noreferrer nofollow"
-      >Privacy Policy</a
-    >
-  </li>
-  <li>
-    <span class="text-[#44546F]">•</span>
-  </li>
-  <li>
-    <a
-      class="text-[#172b4d] hover:underline"
-      href="https://www.atlassian.com/legal/user-notice"
-      target="_blank"
-      >User Notice</a
-    >
-  </li>
+  @for (legalLink of legalLinksList(); track $index) {
+    <li>
+      @if (legalLink.link) {
+        <a
+          class="text-[#172b4d] hover:underline"
+          [href]="legalLink.link"
+          target="_blank"
+          rel="noopener noreferrer nofollow"
+          >{{ legalLink.label }}</a
+        >
+      } @else {
+        <span class="text-[#44546F]">•</span>
+      }
+    </li>
+  }
 </ul>
