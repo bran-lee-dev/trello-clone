@@ -1,4 +1,7 @@
-import { ApplicationConfig } from '@angular/core';
+import {
+  ApplicationConfig,
+  provideExperimentalZonelessChangeDetection,
+} from '@angular/core';
 import {
   PreloadAllModules,
   provideRouter,
@@ -8,5 +11,8 @@ import {
 import { routes } from './app.routes';
 
 export const appConfig: ApplicationConfig = {
-  providers: [provideRouter(routes, withPreloading(PreloadAllModules))],
+  providers: [
+    provideExperimentalZonelessChangeDetection(),
+    provideRouter(routes, withPreloading(PreloadAllModules)),
+  ],
 };
