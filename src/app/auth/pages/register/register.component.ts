@@ -28,7 +28,7 @@ export class RegisterComponent {
   public readonly socialMediaList: SocialNetwork[] = [
     {
       image: {
-        url: 'https://id-frontend.prod-east.frontend.public.atl-paas.net/assets/google-logo.5867462c.svg',
+        url: 'google-logo.5867462c.svg',
         alt: 'Google logo',
       },
       name: 'google',
@@ -38,7 +38,7 @@ export class RegisterComponent {
     },
     {
       image: {
-        url: 'https://id-frontend.prod-east.frontend.public.atl-paas.net/assets/microsoft-logo.c73d8dca.svg',
+        url: 'microsoft-logo.c73d8dca.svg',
         alt: 'Microsoft logo',
       },
       name: 'microsoft',
@@ -48,7 +48,7 @@ export class RegisterComponent {
     },
     {
       image: {
-        url: 'https://id-frontend.prod-east.frontend.public.atl-paas.net/assets/apple-logo.54e0d711.svg',
+        url: 'apple-logo.54e0d711.svg',
         alt: 'Apple logo',
       },
       name: 'apple',
@@ -58,7 +58,7 @@ export class RegisterComponent {
     },
     {
       image: {
-        url: 'https://id-frontend.prod-east.frontend.public.atl-paas.net/assets/slack-logo.5d730c10.svg',
+        url: 'slack-logo.5d730c10.svg',
         alt: 'Slack logo',
       },
       name: 'slack',
