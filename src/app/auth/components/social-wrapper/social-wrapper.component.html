@@ -7,10 +7,11 @@
         class="mb flex h-10 w-full items-center justify-center gap-[0.625rem] border-[1px] border-[#c1c7d0]">
         <img
           class="ml-1"
-          [src]="socialMedia.image.url"
+          [ngSrc]="socialMedia.image.url"
           [alt]="socialMedia.image.alt"
           width="24"
-          height="24" />
+          height="24"
+          priority />
         <span
           class="mr-2 self-baseline text-sm font-medium leading-10 tracking-normal text-[#172B4D]">
           {{ socialMedia.name | titlecase }}
