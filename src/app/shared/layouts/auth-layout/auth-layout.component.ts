@@ -4,7 +4,7 @@ import { ChangeDetectionStrategy, Component, input } from '@angular/core';
   selector: 'app-layout',
   standalone: true,
   imports: [],
-  templateUrl: './layout.component.html',
+  templateUrl: './auth-layout.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class LayoutComponent {
